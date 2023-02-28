@@ -2,9 +2,9 @@ import cx_Oracle
 
 def output_type_handler(cursor, default_type):
     if default_type == cx_Oracle.DB_TYPE_CLOB:
-        return cursor.var(cx_Oracle.DB_TYPE_LONG, arraysize=cursor1.arraysize)
+        return cursor.var(cx_Oracle.DB_TYPE_LONG, arraysize=cursor.arraysize)
     if default_type == cx_Oracle.DB_TYPE_BLOB:
-        return cursor.var(cx_Oracle.DB_TYPE_LONG_RAW, arraysize=cursor1.arraysize)
+        return cursor.var(cx_Oracle.DB_TYPE_LONG_RAW, arraysize=cursor.arraysize)
 
 def read_image(filename):
     with open(filename, 'rb') as f:
